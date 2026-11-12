@@ -1,0 +1,4 @@
+interface:
+  display_name: "论文自主精读笔记"
+  short_description: "自主精读论文，串联研究逻辑、展开公式推导并分析表达语料，交付详细 HTML 图文笔记"
+  default_prompt: "使用 $paper-reading-notes 自主精读这篇论文，生成包含关键词逻辑主线、问题发现、解法依据、公式推导、图表证据及论证表达语料的详细 HTML 图文笔记。"

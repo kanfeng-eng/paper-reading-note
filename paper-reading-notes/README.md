@@ -24,7 +24,7 @@ HTML 内嵌展示图片、样式和必要数学资源，单独复制后可离线
 
 ## 阅读与复习排版
 
-默认采用本机微软雅黑承接中文，Segoe UI 承接英文与数字，并配置苹方、Noto Sans CJK SC、思源黑体等回退。正文默认 18 px、400 字重、1.8 行高，正文栏约 35–40 个汉字宽。这些是本技能根据资料采用的设计默认值，用户阅读偏好优先。HTML 简短标注首选字体、正文大小和行高，并检查离线回退、窄屏、200% 缩放及用户覆盖文字间距后的显示。
+正文采用 Noto Serif SC、18 px、400 字重、1.95 倍行高；标题与导航采用 Noto Sans SC；排版公式采用 Cambria Math。复习答案与正文同步使用相同字号和行高。正文栏约 35–40 个汉字宽，HTML 标注字体与阅读参数，并核对实际字体加载。交付前实际检查桌面、手机视口及展开的复习答案，记录视口、截图与结果；浏览器模拟和真机检查分别注明。离线字体按其许可和目标设备能力处理，未解决的回退按实记录。
 
 ## 包内资源
 
@@ -50,7 +50,8 @@ python scripts/check_output.py <reading-note.html>
 - [Jason Eisner 的 How to Read a Technical Paper](https://www.cs.jhu.edu/~jason/advice/how-to-read-a-paper.html)，原技能采用的理解难点与知识联系参考。
 - [Michael Nielsen 的 Augmenting Long-term Memory](https://augmentingcognition.com/ltm.html)，原技能采用的带上下文复习问题参考。
 - HTML 设计指导来自包内 [frontend-design](vendor/frontend-design/SKILL.md)，许可证见 [Apache-2.0](vendor/frontend-design/LICENSE.txt)。
-- [微软 Microsoft YaHei 字体说明](https://learn.microsoft.com/en-us/typography/font-list/microsoft-yahei)，介绍其中文屏幕显示与小字号辨认特性。
+- [Noto 官方使用文档](https://notofonts.github.io/noto-docs/website/use/)，用于字体获取、语言覆盖和使用方式参考。
+- [微软 Cambria Math 字体说明](https://learn.microsoft.com/en-us/typography/font-list/cambria-math)，用于数学字体及使用方式参考。
 - [USWDS Typography](https://designsystem.digital.gov/components/typography/)，用于结合字体、字号、行宽和间距配置阅读排版。
 - [W3C 中文排版需求](https://www.w3.org/TR/clreq/)，用于中文行长与行距的参考。
 - [WCAG 1.4.8 Visual Presentation](https://www.w3.org/WAI/WCAG21/Understanding/visual-presentation)，用于参考行宽、对齐与放大后的阅读要求。

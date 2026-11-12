@@ -38,7 +38,7 @@ $skill-installer https://github.com/kanfeng-eng/paper-reading-note/tree/main/pap
 
 ## 阅读排版
 
-字体与布局以长期阅读和反复复习为目标。默认中文优先使用本机微软雅黑，英数使用 Segoe UI，配置跨平台回退。正文默认 18 px、常规字重、1.8 行高，正文栏约 35–40 个汉字宽，HTML 标注首选字体及阅读参数。字号与间距按用户偏好调整，检查离线回退、窄屏和放大后的可读性。排版资料和来源见 [技能文档末尾](paper-reading-notes/README.md#来源与归属)。
+字体与布局以长期阅读和反复复习为目标。正文采用 Noto Serif SC、18 px、常规字重、1.95 倍行高，标题与导航采用 Noto Sans SC，公式采用 Cambria Math。复习答案与正文同步放大。正文栏约 35–40 个汉字宽，HTML 标注阅读参数，交付前实际检查桌面和手机视口并记录结果。排版资料和来源见 [技能文档末尾](paper-reading-notes/README.md#来源与归属)。
 
 ## 本地验证
 

@@ -2,7 +2,7 @@
 name: paper-reading-notes
 description: Autonomously close-read scientific papers and directly produce detailed HTML notes with keyword-led reasoning, problem discovery, solution rationale, equation derivations, inspected figure crops, and source-grounded argument and expression analysis. Use for completed reading notes and independent paper analysis.
 metadata:
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # 自主精读与 HTML 图文笔记
@@ -56,6 +56,8 @@ metadata:
 默认保存到当前任务项目的 `论文笔记/<paper-slug>/reading-note.html`，用户指定路径优先。已有论文专属文件夹时优先就近保存。写入前检查已有文件与人工修改，内容冲突时另存明确版本。
 
 最终交付文件为论文目录中的 `reading-note.html`，包含完整精读、语料原文裁剪、重要实验与表格裁剪、公式及研究启示。所有必要展示资源内嵌，单独复制 HTML 后可离线阅读。用户另有最终文件命名要求时优先遵循。
+
+字体与排版服务于长时间阅读和反复复习。默认中文正文优先使用本机微软雅黑，英文与数字搭配 Segoe UI，并配置跨平台中文回退。正文默认 18 px、常规字重、1.8 行高，正文栏约 35–40 个汉字宽。按 [HTML 输出规范](references/html-output.md)落实字体层级、阅读排版标注、离线回退、放大与文字间距检查。用户明确的阅读偏好优先。
 
 本次生成的中间与辅助材料统一保存到同一论文目录下的 `tmp/`，按需使用 `source/`、`pages/`、`crops/`、`drafts/`、`scripts/` 和 `checks/` 等子目录。提取文本、来源映射、整页图、裁剪原文件、Markdown 草稿、证据记录、临时脚本、日志、截图和检查结果归入其中。最终 HTML 使用内嵌的图片、样式和必要数学资源，独立于 tmp。原有论文和人工文件按其现有位置处理，路径冲突另存。
 

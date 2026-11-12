@@ -2,7 +2,7 @@
 name: paper-reading-notes
 description: Autonomously close-read scientific papers and directly produce detailed HTML notes with keyword-led reasoning, problem discovery, solution rationale, equation derivations, inspected figure crops, and source-grounded argument and expression analysis. Use for completed reading notes and independent paper analysis.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # 自主精读与 HTML 图文笔记
@@ -43,9 +43,11 @@ metadata:
 
 读论文所需的来源核查属于本任务。代码审查、运行实验、复现、批量文献调查和外部发布按用户的实际请求执行。记录找到链接、检查实现、运行与复现等真实状态。
 
-## 图表与公式图片
+## 语料、实验、图表与公式图片
 
 每幅单独展开解释的图表使用已检查的原图区域裁剪或原始单图，紧邻解释放置。保留相关面板、坐标轴、单位、图例、图注、表头及脚注。整页渲染用于内部定位，交付笔记中的图片限定为对应图表或公式区域。过大的图表按连续顺序拆分并注明面板覆盖。
+
+每条精选语料都附原文短句所在区域的裁剪，旁列可复制的原文、释义及逻辑分析。支撑核心结论的重要实验、主结果、消融、机制验证和失败分析，均嵌入对应实验图、表格或必要文字段落的原文裁剪。阅读时记录需展示的证据及位置，交付前逐项核对裁剪、嵌入和解释的覆盖。具体要求见 [HTML 输出规范](references/html-output.md)。
 
 原文视觉证据与 AI 绘制的解释示意分别标记。AI 示意只解释已核对的机制。公式转写与渲染不清楚时保留原式区域裁剪和不确定项。裁剪或检查受阻时记录具体缺口及来源位置。
 
@@ -53,6 +55,10 @@ metadata:
 
 默认保存到当前任务项目的 `论文笔记/<paper-slug>/reading-note.html`，用户指定路径优先。已有论文专属文件夹时优先就近保存。写入前检查已有文件与人工修改，内容冲突时另存明确版本。
 
-最终 HTML 内含完整精读、裁剪图、公式、语料和研究启示，核心内容离线可读。支持材料只按核查需要保留。跨论文语料文件在用户明确要求累计时追加，并先去重、保留用户编辑。
+最终交付文件为论文目录中的 `reading-note.html`，包含完整精读、语料原文裁剪、重要实验与表格裁剪、公式及研究启示。所有必要展示资源内嵌，单独复制 HTML 后可离线阅读。用户另有最终文件命名要求时优先遵循。
+
+本次生成的中间与辅助材料统一保存到同一论文目录下的 `tmp/`，按需使用 `source/`、`pages/`、`crops/`、`drafts/`、`scripts/` 和 `checks/` 等子目录。提取文本、来源映射、整页图、裁剪原文件、Markdown 草稿、证据记录、临时脚本、日志、截图和检查结果归入其中。最终 HTML 使用内嵌的图片、样式和必要数学资源，独立于 tmp。原有论文和人工文件按其现有位置处理，路径冲突另存。
+
+跨论文语料文件在用户明确要求累计时追加到指定位置，并先去重、保留用户编辑。其他辅助文件按上述 tmp 规则保存。
 
 交付前运行 `python <skill-root>/scripts/check_output.py <reading-note.html>`，修正检测到的宣传署名。再核对完整聊天结尾。最终回复提供实际 HTML 文件链接，简述阅读覆盖和影响使用的重要未验证项。
